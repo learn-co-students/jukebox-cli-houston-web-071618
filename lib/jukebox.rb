@@ -38,4 +38,5 @@ song_num = song_num.to_i - 1
     puts "Invalid input, please try again."
   end  
 end
-play(songs)  
+# play(songs)  
+
