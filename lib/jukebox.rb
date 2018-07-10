@@ -30,12 +30,20 @@ end
 
 def play(songs_a)
 puts "Please enter a song name or number:"
-song_num = gets.chomp  
-song_to_play = song_num.to_i - 1
-# puts song_num
-  if song_to_play < songs_a.length
-    puts "Playing " + songs_a[song_to_play]
-  elsif 
+song_pick = gets.chomp 
+song_int = song_pick.to_i
+song_int_array = Array (1..9)
+
+    # is song name included in song_a array
+    if songs_a.include?("#{song_pick}") == true      
+    puts "Playing #{song_pick}"
+ 
+    # is song num included in song int array
+    elsif song_int_array.include?(song_int) == true
+    puts "Playing " + songs_a[song_int - 1]
+
+    # elsif song_int_array.include?(song_int) == false || songs_a.include?("#{song_pick}") == false
+  else
     puts "Invalid input, please try again."
   end  
 end
@@ -61,5 +69,5 @@ user_command = gets.chomp
     run(songs_a)
   end
 end  
-run(songs)
+# run(songs)
 
