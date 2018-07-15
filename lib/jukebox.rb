@@ -53,7 +53,7 @@ def run(songs)
   until input == "exit"
     input = gets.chomp
     if input == "list"
-      list
+      list(songs)
     elsif input == "play"
         play(songs)
       elsif input == "help"
@@ -66,3 +66,5 @@ def run(songs)
       end
     end
 end
+
+run(songs)
