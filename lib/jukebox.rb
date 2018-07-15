@@ -58,8 +58,11 @@ def run(songs)
         play(songs)
       elsif input == "help"
         help
-      else
+      elsif input == "exit"
         exit_jukebox
+      else
+        puts "Invalid input"
+        help
       end
     end
 end
